@@ -1,6 +1,0 @@
-[submodule "foundry/twinbot-contracts/lib/forge-std"]
-	path = foundry/twinbot-contracts/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "foundry/twinbot-contracts/lib/openzeppelin-contracts"]
-	path = foundry/twinbot-contracts/lib/openzeppelin-contracts
-	url = https://github.com/OpenZeppelin/openzeppelin-contracts

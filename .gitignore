@@ -1,0 +1,13 @@
+# Root level ignores
+.DS_Store
+*.log
+node_modules/
+.next/
+.env*
+.vercel
+temp_backup/
+
+# Contract ignores
+/contracts/cache/
+/contracts/out/
+/contracts/broadcast/
