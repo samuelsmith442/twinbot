@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TwinChat typing animation */
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #666;
+  color: #666;
+  box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #666, 9999px -10px 0 0 #666, 10014px 0 0 0 #666;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px -10px 0 0 #666;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #666, 9999px 0 0 0 #666, 10014px 0 0 0 #666;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .inner-shadow {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
